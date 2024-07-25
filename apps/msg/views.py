@@ -1,6 +1,5 @@
 from django.views.generic import FormView
 
 
-class MainView(FormView):
+class MsgView(FormView):
     pass
-

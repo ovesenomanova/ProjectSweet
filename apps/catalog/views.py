@@ -1,7 +1,5 @@
-from django.http import HttpRequest
-from django.shortcuts import render
+from django.views.generic import FormView
 
 
-def de(request: HttpRequest):
-    return render(request, 'catalog.html')
-
+class CatalogView(FormView):
+    pass

@@ -3,10 +3,10 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('main/', include('main.urls')),
-    path('catalog/', include('catalog.urls')),
-    path('messages/', include('messages.urls')),
-    path('payment/', include('payment.urls')),
-    path('users/', include('users.urls'))
+    path('main/', include('apps.main.urls')),
+    path('catalog/', include('apps.catalog.urls')),
+    path('msg/', include('apps.msg.urls')),
+    path('payment/', include('apps.payment.urls')),
+    path('users/', include('apps.users.urls'))
 
 ]

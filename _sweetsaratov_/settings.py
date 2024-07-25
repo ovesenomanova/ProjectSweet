@@ -40,7 +40,7 @@ INSTALLED_APPS = [
 
     'apps.main',
     'apps.catalog',
-    'apps.messages',
+    'apps.msg',
     'apps.payment',
     'apps.users'
 ]
@@ -127,3 +127,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+#TODO 2
+AUTH_USER_MODEL = 'users.User'
