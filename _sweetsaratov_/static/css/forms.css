@@ -1,0 +1,47 @@
+.formWrapper{
+    display: flex;
+    justify-content: center;
+
+}
+
+.formFieldWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4px;
+}
+.formFieldWrapper>input{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+.formSubmitWrapper{
+    display: flex;
+    margin: 4px;
+}
+
+.formSubmitWrapper>input{
+    width: 100%;
+}
+
+.formSubmitWrapper>submit{
+    display: flex;
+}
+
+.image-wrapper{
+    display: flex;
+}
+
+.image-wrapper > img{
+    width: 50%;
+}
+
+.image-row{
+    display: flex;
+    flex-direction: row;
+   }
+
+.image-description{
+
+}
