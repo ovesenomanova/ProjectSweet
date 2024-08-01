@@ -1,15 +1,24 @@
 {% extends 'cakes/base.html' %}
 {% load static %}
 {% block content %}
+
+    <ul class="products clearfix">
         {% for item in items %}
-            <div class="image-row">
-                <div class = "image-description">
-                    <div>описание</div>
-                </div>
-                <div class="image-wrapper">
+            <li class="product-wrapper">
+                <div class="product p">
+<!--                    <div>описание</div>-->
+                    <div class="product-photo">
                     <img src="{%static item%}">
                 </div>
-            </div>
+                    <div class="layout-buttons">
+                        <span class="active icon icon-list"></span>
+                        <span class="icon icon-table"></span>
+                    </div>
+                </div>
+
+            </li>
         {% endfor %}
+    </ul>
+
 {% endblock %}
 

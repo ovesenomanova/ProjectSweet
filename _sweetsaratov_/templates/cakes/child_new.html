@@ -1,0 +1,14 @@
+{% extends 'cakes/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="product-item">
+     {% for item in items %}
+        <img src="{%static item%}">
+        <div class="product-list">
+            <h3>Тортик с леденцами, сахарной печатью и шоколадным декором</h3>
+                <span class="price">₽ 1999</span>
+                <a href="" class="button">В корзину</a>
+  </div>
+    {% endfor %}
+</div>
