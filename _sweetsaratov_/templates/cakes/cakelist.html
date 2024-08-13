@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    {% for cake in cakes %}
+        <div>
+            {{cake.name}}
+            {{cake.foto}}
+            {{cake.description}}
+            {{cake.price}}
+        </div>
+    {% endfor %}
+{% endblock %}
