@@ -1,6 +1,6 @@
-from django.views.generic import FormView
+from django.views.generic import TemplateView
 
 
-class MainView(FormView):
-    pass
+class MainView(TemplateView):
+    template_name = "main/main.html"
 

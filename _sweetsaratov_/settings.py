@@ -40,7 +40,7 @@ INSTALLED_APPS = [
 
     'apps.main',
     'apps.catalog',
-    'apps.msg',
+    'apps.forum',
     'apps.payment',
     'apps.users'
 ]
