@@ -17,16 +17,6 @@ class UserRegisterForm(forms.ModelForm):
             'password': forms.PasswordInput(),
             'email': forms.EmailInput()
         }
-        # widgets = {
-        #     "date_of_birth": widgets.DateInput(
-        #         format='%d/%m/%Y',
-        #         attrs={
-        #             'class':        'form-control',
-        #             'placeholder':  'Выберите дату',
-        #             'type':         'date'
-        #         }
-        #     )
-        # }
 
 
 class LoginForm(forms.ModelForm):
@@ -37,19 +27,4 @@ class LoginForm(forms.ModelForm):
         labels = {
             'username': 'Имя пользователя',
             'password': 'Пароль'
-        }
-
-
-class NewMessageForm(forms.ModelForm):
-    class Meta:
-        model = models.User
-        fields = ('username', 'message' )
-
-        labels = {
-            'username': 'Имя пользователя',
-            'message': 'Сообщение'
-        }
-        widgets = {
-            'password': forms.PasswordInput(),
-            'email': forms.EmailInput()
         }
