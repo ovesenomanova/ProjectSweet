@@ -2,29 +2,26 @@
 {% load static %}
 {% block content %}
 
-    <ul class="products clearfix">
+    <div class="products-wrapper">
         {% for item in items %}
-            <li class="product-wrapper">
-                <div class="product p">
-<!--                    <div>описание</div>-->
-                    <div class="product-photo">
-                        <img src="{%static item%}">
-                    </div>
-
-                    <div class="layout-buttons">
-                        <form method="post" action="">
-                            <input type="submit" value="В корзину"  class="button">
-                        </form>
-
-                        <span class="active icon icon-list"></span>
-                        <span class="icon icon-table"></span>
-                    </div>
-
+            <div class="product-wrapper">
+                <div class="product-name">
+                    <div> шапка </div>
                 </div>
 
-            </li>
+                <div class="product-photo">
+                    <img src="{%static item%}">
+                </div>
+
+                <div class="product-name">
+                    <form method="post" action="">
+                        <input type="submit" value="В корзину" class="button">
+                    </form>
+                </div>
+
+            </div>
         {% endfor %}
-    </ul>
+    </div>
 
 {% endblock %}
 

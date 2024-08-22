@@ -15,24 +15,57 @@
     justify-content: center;
     display: flex;
 }
-
 .formSubmitWrapper{
     display: flex;
     margin: 4px;
 }
-
 .formSubmitWrapper>input{
     width: 100%;
 }
-
 .formSubmitWrapper>submit{
     display: flex;
 }
 
+
+.products-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.product-wrapper{
+    display: flex;
+    flex-direction: column;
+    max-width: 50vh;
+
+    margin: 10px;
+}
+.product-name{
+    display: flex;
+    flex-direction: column;
+}
+.product-name > div{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.product-photo{
+    display: flex;
+    justify-content: center;
+}
+.product-photo img{
+    width: 95%;
+    padding: 5%;
+}
+
+.product-wrapper:hover .product-photo img {
+	transform: scale(1.05);
+}
+
+/*.
 .product-photo {
 	position: relative;
 	overflow: hidden;
-	height: 100%;
+	height: 80%;
 }
 
 .product-wrapper {
@@ -40,6 +73,8 @@
 	width: 100%;
 	float: left;
 	transition: width .2s;
+	margin: 0px 20px 20px 0px;
+
 }
 
 .product-photo img {
@@ -54,7 +89,7 @@
 	padding-top: 5%;
     margin-left: auto;
     margin-right: auto;
-    height: 90%;
+    height: 100%;
 }
 
 .product:hover .product-photo img {
@@ -70,6 +105,36 @@
 	overflow: hidden;
 }
 
+.product-name{
+    height:40px;
+
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-color:#FF99CC;
+    border-style:solid;
+    border-width:1px;
+    background:white;
+    cursor:pointer;
+    margin: 0 auto;
+    display: block;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 12px;
+    background: #fff2ff;
+    color: #FF99CC;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 28px;
+    transition: .3s ease-in;
+
+}
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
 @media only screen and (min-width: 450px) {
 	.product-wrapper {
@@ -90,12 +155,15 @@
 }
 
 .product {
-	display: block;
+	display: flex;
+	flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+
 	border: 1px solid #66ffff;
 	border-radius: 3px;
 	position: relative;
 	background: #fff;
-	margin: 0 20px 20px 0;
 	text-decoration: none;
 	color: #474747;
 	z-index: 0;
