@@ -5,7 +5,7 @@
     {% for cake in cakes %}
         <div>
             {{cake.name}}
-            {{cake.foto}}
+            <img src="{%static cake.foto%}">
             {{cake.description}}
             {{cake.price}}
         </div>
