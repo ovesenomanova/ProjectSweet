@@ -1,14 +1,48 @@
 <!DOCTYPE html>
 {% load static %}
 
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css"
-          href="{% static 'css/forms.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/forms.css'%}">
+
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #86f5fc;
+            display: flex;
+
+        }
+        li {
+            float: left;
+        }
+        li a {
+            display: flex;
+            color: #651d75;
+            display: flex;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 800;
+        }
+        li a:hover {
+            background-color: #e5b3e6;
+        }
+    </style>
 </head>
+
 <body>
+
+    <ul>
+      <li><a href="#home">Главная</a></li>
+      <li><a href="#news">Каталог</a></li>
+      <li><a href="#contact">Как сделать заказ</a></li>
+      <li><a href="#about">Контакты</a></li>
+    </ul>
 
     {% block content %}{% endblock %}
 
