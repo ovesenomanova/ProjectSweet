@@ -38,10 +38,12 @@
 <body>
 
     <ul>
-      <li><a href="#home">Главная</a></li>
-      <li><a href="#news">Каталог</a></li>
-      <li><a href="#contact">Как сделать заказ</a></li>
-      <li><a href="#about">Контакты</a></li>
+      <li><a href="{% url 'main' %}">Главная</a></li>
+      <li><a href="{% url 'catalog' %}">Каталог</a></li>
+      <li><a href="{% url 'order' %}">Как сделать заказ</a></li>
+      <li><a href="{% url 'contact'%}">Контакты</a></li>
+        <li><a href="{% url 'new_post' %}">Оставить сообщение</a></li>
+
     </ul>
 
     {% block content %}{% endblock %}

@@ -5,7 +5,7 @@ from .views import TitleViewRedirect
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('main/', include('apps.main.urls')),
+    path('info/', include('apps.info.urls')),
     path('catalog/', include('apps.catalog.urls')),
     path('forum/', include('apps.forum.urls')),
     path('payment/', include('apps.payment.urls')),
