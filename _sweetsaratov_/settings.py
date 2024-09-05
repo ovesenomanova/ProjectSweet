@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'apps.catalog',
     'apps.forum',
     'apps.payment',
-    'apps.users'
+    'apps.users',
+    'apps.basket',
 ]
 
 MIDDLEWARE = [
@@ -131,3 +132,6 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #TODO 2
 AUTH_USER_MODEL = 'users.User'
+
+
+
