@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    {% for message in messages %}
+        <div>
+            <hr>
+                {{message.content}}
+                <img src="media/{{message.attached_file}}">
+            <hr>
+        </div>
+    {% endfor %}
+
+{% endblock %}

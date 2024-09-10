@@ -1,35 +1,27 @@
-from django.http import HttpRequest
-from . import forms
-from django.shortcuts import render, redirect
-from django.views.generic import FormView
+from django.views.generic import FormView, TemplateView
 from .forms import ForumMessages
+from .models import ForumMessage
 from django.urls import reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
-def forum(request: HttpRequest):
-    template_kwards = {
-        'user': request.user
-    }
-    return render(request, 'forum/titul.html', template_kwards)
-
-
-class ForumMessageView(FormView):
+class ForumMessageView(LoginRequiredMixin, FormView):
+    login_url = reverse_lazy('login')
     template_name = "forum/new_post.html"
     form_class = ForumMessages
     success_url = reverse_lazy('all')
 
+    def form_valid(self, form):
+        messages = form.save(commit=False)
+        messages.sender = self.request.user
+        messages.save()
+        return super().form_valid(form)
 
-def new_post(request: HttpRequest):
-    if request.method == 'GET':
-        template_kwargs = {
-            'form': forms.ForumMessages()
-        }
-        return render(request, 'forum/new_post.html', template_kwargs)
-    #добавление нового сообщения сделать тут
-    return redirect( forum )
 
-def all(request: HttpRequest):
-    template_kwards = {
-        'user': request.user
-    }
-    return render(request, 'forum/all.html', template_kwards)
+class ForumView(TemplateView):
+    template_name = 'forum/forum.html'
+
+    def get_context_data(self, **kwargs):
+        context = kwargs
+        context["messages"] = ForumMessage.objects.all()
+        return super(ForumView, self).get_context_data(**context)
