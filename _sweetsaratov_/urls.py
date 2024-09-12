@@ -7,13 +7,14 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', TitleViewRedirect.as_view()),
+
     path('info/', include('apps.info.urls')),
     path('catalog/', include('apps.catalog.urls')),
     path('forum/', include('apps.forum.urls')),
-    path('payment/', include('apps.payment.urls')),
     path('users/', include('apps.users.urls')),
-    path('', TitleViewRedirect.as_view())
-
+    path('basket/', include('apps.basket.urls')),
+    path('payments/', include('apps.payments.urls')),
 ]
 
 

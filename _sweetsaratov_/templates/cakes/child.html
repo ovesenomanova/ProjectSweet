@@ -21,11 +21,9 @@
                     <div> {{item.price}} </div>
                 </div>
 
-
-
-
                 <div class="product-name">
-                    <form method="post" action="">
+                    <form method="post" action="../basket/buy/{{item.id}}/">
+                        {% csrf_token %}
                         <input type="submit" value="В корзину" class="button">
                     </form>
                 </div>

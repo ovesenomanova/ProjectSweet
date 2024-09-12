@@ -41,9 +41,10 @@ INSTALLED_APPS = [
     'apps.info',
     'apps.catalog',
     'apps.forum',
-    'apps.payment',
     'apps.users',
+
     'apps.basket',
+    'apps.payments',
 ]
 
 MIDDLEWARE = [
@@ -136,6 +137,14 @@ AUTH_USER_MODEL = 'users.User'
 MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/media/'
 
+PAYMENT_HOST = 'localhost:8000'
 
+PAYMENT_USES_SSL = False
+
+PAYMENT_MODEL = 'mypaymentapp.models.Payment'
+
+PAYMENT_VARIANTS = {
+    'default': ('payments.dummy.DummyProvider', {})
+}
 
 

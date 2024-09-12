@@ -2,5 +2,5 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('login/', views.UserLoginView.as_view(), name='login'),
+    path('buy/<slug:id>/', views.AddToBinView.as_view(), name='add_to_bin'),
 ]
