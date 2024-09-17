@@ -22,9 +22,9 @@
                 </div>
 
                 <div class="product-name">
-                    <form method="post" action="../basket/buy/{{item.id}}/">
+                    <form method="get" action="../basket/buy/{{item.id}}/">
                         {% csrf_token %}
-                        <input type="submit" value="В корзину" class="button">
+                        <input type="submit" value="Купить" class="button">
                     </form>
                 </div>
 

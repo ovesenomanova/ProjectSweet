@@ -1,6 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
 
-<form action="{{ form.action }}" method="{{ form.method }}">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <p><input type="submit" value="Proceed" /></p>
-</form>
+
+<div class="products-wrapper">
+
+            <div class="product-wrapper">
+                <div class="product-name">
+                    <div> {{cake.name}} </div>
+                </div>
+
+                <div class="product-photo">
+                    <img src="{%static cake.foto%}">
+                </div>
+
+                <div class="product-description">
+                    <div> {{cake.description}} </div>
+                </div>
+
+                <div class="price">
+                    <div> {{cake.price}} </div>
+                </div>
+
+
+<div class="product-name">
+                    <form method="get" action="../basket/buy/{{cake.id}}/">
+                        {% csrf_token %}
+                        <input type="submit" value="Подтвердить" class="button">
+                    </form>
+                </div>
+{% endblock %}
