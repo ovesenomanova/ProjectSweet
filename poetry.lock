@@ -128,6 +128,19 @@ files = [
 ]
 
 [[package]]
+name = "dj-static"
+version = "0.0.6"
+description = "Serve production static files with Django."
+optional = false
+python-versions = "*"
+files = [
+    {file = "dj-static-0.0.6.tar.gz", hash = "sha256:032ec1c532617922e6e3e956d504a6fb1acce4fc1c7c94612d0fda21828ce8ef"},
+]
+
+[package.dependencies]
+static3 = "*"
+
+[[package]]
 name = "django"
 version = "5.0.7"
 description = "A high-level Python web framework that encourages rapid development and clean, pragmatic design."
@@ -269,6 +282,20 @@ dev = ["build", "hatch"]
 doc = ["sphinx"]
 
 [[package]]
+name = "static3"
+version = "0.7.0"
+description = "A really simple WSGI way to serve static (or mixed) content."
+optional = false
+python-versions = "*"
+files = [
+    {file = "static3-0.7.0.tar.gz", hash = "sha256:674641c64bc75507af2eb20bef7e7e3593dca993dec6674be108fa15b42f47c8"},
+]
+
+[package.extras]
+genshimagic = ["Genshi"]
+kidmagic = ["kid"]
+
+[[package]]
 name = "typing-extensions"
 version = "4.12.2"
 description = "Backported and Experimental Type Hints for Python 3.8+"
@@ -307,7 +334,22 @@ h2 = ["h2 (>=4,<5)"]
 socks = ["pysocks (>=1.5.6,!=1.5.7,<2.0)"]
 zstd = ["zstandard (>=0.18.0)"]
 
+[[package]]
+name = "waitress"
+version = "3.0.0"
+description = "Waitress WSGI server"
+optional = false
+python-versions = ">=3.8.0"
+files = [
+    {file = "waitress-3.0.0-py3-none-any.whl", hash = "sha256:2a06f242f4ba0cc563444ca3d1998959447477363a2d7e9b8b4d75d35cfd1669"},
+    {file = "waitress-3.0.0.tar.gz", hash = "sha256:005da479b04134cdd9dd602d1ee7c49d79de0537610d653674cc6cbde222b8a1"},
+]
+
+[package.extras]
+docs = ["Sphinx (>=1.8.1)", "docutils", "pylons-sphinx-themes (>=1.0.9)"]
+testing = ["coverage (>=5.0)", "pytest", "pytest-cov"]
+
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "fcb003d86d67596833b55f825663da634b100d79c1812e9475e1caad92f1d11b"
+content-hash = "b8d3f74568647e4f78f5b06b00950acc6a9d65da3cbdaa95e5113f6bcd911b1c"
