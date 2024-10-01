@@ -11,6 +11,7 @@ django = "^5.0.7"
 django-payments = {extras = ["mercadopago"], version = "^3.0.1"}
 dj-static = "^0.0.6"
 waitress = "^3.0.0"
+gunicorn = "^23.0.0"
 
 
 [build-system]
