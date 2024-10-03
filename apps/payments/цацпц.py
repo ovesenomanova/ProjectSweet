@@ -1,2 +1,0 @@
-list_age = [1,2,3,4]
-print(len(list_age))
